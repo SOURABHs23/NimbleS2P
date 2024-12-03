@@ -26,7 +26,7 @@ export const deleteEmployee = async (req, res) => {
 export const getEmployeeByName = async (req, res) => {
   try {
     let { name } = req.params;
-    // name = name.toLowerCase();
+    name = name.toLowerCase();
     console.log(name);
 
     const employee = await Employee.findOne({ name });
